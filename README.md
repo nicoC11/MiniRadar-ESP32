@@ -7,6 +7,7 @@ A real-time flight tracking radar system based on **ESP32** and built with **Pla
 ## 🚀 Features
 
 * **Real-time flight monitoring:** Periodic HTTPS requests to the **airplanes.live** API, sending your location's geographic coordinates (latitude and longitude) to query and filter aircraft flying within a specified radius.
+* **Physical button screen navigation:** Easily cycle through display modes (Radar View ➔ Nearest Aircraft Details ➔ Flight History ➔ Radar View) using a single push button connected to GPIO 25.
 * **Nearest aircraft detail screen:** Dedicated view showing complete telemetry for the aircraft closest to your location at any given moment, including callsign, aircraft type/model, altitude, speed, heading, and calculated distance from your coordinates.
 * **Flight history and memory persistence:** Continuous logging of the most frequent flights passing through your coverage radius. Uses the microcontroller's Non-Volatile Storage (NVS) via `Preferences.h` to permanently store aircraft counts and statistics, preserving data even after powering off or restarting the ESP32.
 * **Efficient JSON parsing:** Optimized processing of API responses using the `ArduinoJson` (v7) library.
@@ -26,16 +27,18 @@ A real-time flight tracking radar system based on **ESP32** and built with **Pla
 
 ### Pinout Table
 
-| TFT Pin | ESP32 Pin | Description |
+| Component / Pin | ESP32 Pin | Description |
 | --- | --- | --- |
-| **VCC** | `3.3V` | Display power supply |
-| **GND** | `GND` | Common ground |
+| **VCC (TFT)** | `3.3V` | Display power supply |
+| **GND (TFT)** | `GND` | Common ground |
 | **CS** | `GPIO 5` | Chip Select (SPI) |
 | **RESET** | `GPIO 4` | Display Reset |
 | **DC (A0)** | `GPIO 2` | Data / Command Control |
 | **SDA (MOSI)** | `GPIO 23` | SPI Data Transmit |
 | **SCK (SCL)** | `GPIO 18` | SPI Clock |
 | **LED / BL** | `GPIO 13` *(or 3.3V)* | Backlight Control (PWM / ON-OFF) |
+| **Button SIG** | `GPIO 25` | Push button input signal |
+| **Button VCC** | `GPIO 33` | Button module power supply (3.3V) |
 
 ---
 
