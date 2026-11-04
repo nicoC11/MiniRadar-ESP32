@@ -106,3 +106,7 @@ pio run -t upload
 ## 📄 License
 
 This project is licensed under the **MIT** License. See the [`LICENSE`](https://www.google.com/search?q=LICENSE) file for details.
+
+## Acknowledgements
+
+* Built with assistance from **Claude AI** for code scaffolding and optimization.
