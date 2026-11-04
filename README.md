@@ -83,8 +83,8 @@ Open `include/secrets.h` in your text editor and define your actual parameters:
 #define SECRET_TELEGRAM_CHAT_ID "YOUR_CHAT_ID"
 
 // Location Coordinates (Latitude / Longitude)
-#define SECRET_LATITUDE "YOUR_LAT"
-#define SECRET_LONGITUDE "YOUR_LONG"
+#define SECRET_LATITUDE 0.000000f
+#define SECRET_LONGITUDE 0.000000f
 
 #endif
 ```
