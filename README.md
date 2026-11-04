@@ -2,7 +2,7 @@
 
 A real-time flight tracking radar system based on **ESP32** and built with **PlatformIO**. The device retrieves nearby aircraft position and telemetry data via HTTP requests to aviation APIs, renders the information on a TFT display using the `TFT_eSPI` library, and sends automated notifications through a Telegram bot.
 
----
+
 
 ## 🚀 Features
 
@@ -15,7 +15,7 @@ A real-time flight tracking radar system based on **ESP32** and built with **Pla
 * **Telegram notifications:** Automated alerts sent to your phone via an integrated Telegram bot (`WiFiClientSecure`), filtered to notify only when detecting heavy aircraft (such as Boeing 747, Airbus A380) or military flights within the specified radius.
 * **Credential security:** Complete isolation of sensitive data (Wi-Fi network, keys, coordinates) inside a `secrets.h` file kept strictly out of Git.
 
----
+
 
 ## 🛠️ Hardware and Wiring
 
@@ -40,7 +40,7 @@ A real-time flight tracking radar system based on **ESP32** and built with **Pla
 | **Button SIG** | `GPIO 25` | Push button input signal |
 | **Button VCC** | `GPIO 33` | Button module power supply (3.3V) |
 
----
+
 
 ## ⚙️ Environment Setup and Libraries
 
@@ -51,7 +51,7 @@ The project uses **PlatformIO** for dependency management and hardware configura
 
 > 💡 **Note:** If you want to change connection pins or adjust other parameters such as SPI bus frequency, you can do so directly by editing the lines under `build_flags` in `platformio.ini`.
 
----
+
 
 ## 🔑 Project Setup and Credentials
 
@@ -101,7 +101,7 @@ pio run -t upload
 
 
 
----
+
 
 ## 📄 License
 
