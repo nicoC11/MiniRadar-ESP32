@@ -526,12 +526,15 @@ void fetchAircraftData() {
   if (WiFi.status() != WL_CONNECTED) return;
 
   HTTPClient http;
-  String url = "https://api.airplanes.live/v2/point/"
-               + String(MY_LAT, 4) + "/"
-               + String(MY_LON, 4) + "/"
+  String url = "https://opendata.adsb.fi/api/v3/lat/"
+               + String(MY_LAT, 4) + "/lon/"
+               + String(MY_LON, 4) + "/dist/"
                + String(RADIUS_NM, 0);
 
   http.begin(url);
+
+  http.addHeader("User-Agent", USER_AGENT_HEADER);  
+
   int httpCode = http.GET();
 
   if (httpCode == 200) {
